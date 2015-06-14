@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @author Ruslan Gumennyi <ruslan.gumennyi@gmail.com>
+ * @package RG_Guestbook
+ *
+ */
+ -->
+<config>
+    <modules>
+        <RG_Guestbook>
+            <active>true</active>
+            <codePool>community</codePool>
+        </RG_Guestbook>
+    </modules>
+</config>

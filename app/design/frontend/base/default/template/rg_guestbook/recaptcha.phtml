@@ -1,0 +1,4 @@
+<?php if ($this->getEnabled()):
+    $recaptcha = new Zend_Service_ReCaptcha($this->getPubKey(), $this->getPrvKey());
+    echo $recaptcha->getHTML();
+endif;?>

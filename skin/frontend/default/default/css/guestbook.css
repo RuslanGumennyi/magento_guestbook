@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+#guestbook_entries {
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+#guestbook_entries .entry {
+    margin-bottom: 30px;
+}
+#guestbook_entries .text {
+
+}
+#guestbook_entries .author {
+    float: right;
+    font-style: italic;
+    padding-right: 15px;
+
+}

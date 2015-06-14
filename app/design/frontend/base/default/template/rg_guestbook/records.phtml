@@ -1,0 +1,11 @@
+<div id="guestbook_entries">
+<?php if ($records = $this->getRecords()):?>
+    <?php foreach($records as $record):?>
+        <div class="entry">
+            <p class="text"><?php echo $record['message_text'] ?><br/>
+                <span class="author"><?php echo $record['author_name']?></span>
+            </p>
+        </div>
+    <?php endforeach;?>
+<?php endif;?>
+</div>

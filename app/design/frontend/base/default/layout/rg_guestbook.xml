@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="top.links">
+            <action method="addLink" translate="label title" module="guestbook" ifconfig="guestbook/guestbook/enabled"><label>Guestbook</label><url>guestbook</url><title>Guestbook</title><prepare>true</prepare><position>50</position></action>
+        </reference>
+    </default>
+
+    <guestbook_index_index translate="label">
+        <label>Guestbook</label>
+        <reference name="head">
+            <action method="setTitle" translate="title" module="guestbook"><title>Guestbook</title></action>
+            <action method="addCss"><stylesheet>css/guestbook.css</stylesheet></action>
+        </reference>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+            <action method="setHeaderTitle" translate="title" module="guestbook"><title>Guestbook</title></action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" name="guestbook.header" template="rg_guestbook/header.phtml" />
+            <block type="core/template" name="records" template="rg_guestbook/records.phtml"/>
+            <block type="core/template" name="guestbookForm" template="rg_guestbook/form.phtml" >
+                <block type="core/template" name="recaptcha" template="rg_guestbook/recaptcha.phtml" />
+            </block>
+        </reference>
+    </guestbook_index_index>
+
+    <guestbook_index_list>
+        <reference name="root">
+            <action method="setTemplate"><template>page/empty.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" name="records" template="rg_guestbook/records.phtml"/>
+        </reference>
+    </guestbook_index_list>
+</layout>

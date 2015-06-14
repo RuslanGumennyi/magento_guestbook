@@ -1,0 +1,51 @@
+<form action="<?php echo $this->getFormAction(); ?>" id="guestbookForm" method="post">
+    <div class="fieldset">
+        <h2 class="legend"><?php echo Mage::helper('guestbook')->__('Contact Information') ?></h2>
+        <ul class="form-list">
+            <li class="fields">
+                <div class="field">
+                    <label for="name" class="required"><em>*</em><?php echo Mage::helper('guestbook')->__('Name') ?></label>
+                    <div class="input-box">
+                        <input name="name" id="name" title="<?php echo Mage::helper('guestbook')->__('Name') ?>" value="<?php echo $this->htmlEscape($this->helper('guestbook')->getUserName()) ?>" class="input-text required-entry" type="text" />
+                    </div>
+                </div>                
+            </li>            
+            <li class="wide">
+                <label for="comment" class="required"><em>*</em><?php echo Mage::helper('guestbook')->__('Comment') ?></label>
+                <div class="input-box">
+                    <textarea name="comment" id="comment" title="<?php echo Mage::helper('guestbook')->__('Comment') ?>" class="required-entry input-text" cols="5" rows="3"></textarea>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="recaptcha">
+    	<?php echo $this->getChildHtml('recaptcha') ?>
+    </div>
+    <div class="buttons-set">
+        <p class="required"><?php echo Mage::helper('guestbook')->__('* Required Fields') ?></p>
+        <input type="text" name="hideit" id="hideit" value="" style="display:none !important;" />
+        <input type="text" name="ajax" id="ajax" value="" style="display:none !important;" />
+        <button type="submit" title="<?php echo Mage::helper('guestbook')->__('Submit') ?>" class="button"><span><span><?php echo Mage::helper('guestbook')->__('Submit') ?></span></span></button>
+    </div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+    
+	var form = $('guestbookForm');
+	var validator = new Validation(form);
+	$('ajax').setValue('yes');
+
+	Form.Element.focus(Form.findFirstElement(form));
+	
+	Event.observe('guestbookForm', 'submit', function(event) {			
+		if (validator && validator.validate()) {
+			$('guestbookForm').request({			
+				onSuccess : function(t) {					
+					$('guestbook_entries').appear({ duration: 1.0, from: 0, to: 1 }).update(t.responseText);		
+				}
+			});	
+			Event.stop(event);
+		};  
+	});  
+//]]>
+</script>

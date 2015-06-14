@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>RG_Guestbook</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Simple guestbook</summary>
+    <description>This was my test exercise</description>
+    <notes>backend moderation not realized still</notes>
+    <authors><author><name>Ruslan Gumennyi</name><user>RuslanGumennyi</user><email>ruslan.gumennyi@gmail.com</email></author></authors>
+    <date>2011-10-10</date>
+    <time>18:57:48</time>
+    <contents><target name="magecommunity"><dir name="RG"><dir name="Guestbook"><dir name="Helper"><file name="Data.php" hash="c56b5a32f649fd8afe3a73821c73487b"/></dir><dir name="Model"><file name="Guestbook.php" hash="3d73121ab47b7d6cdb57d89a21cc9a7e"/><dir name="Mysql4"><file name="Collection.php" hash="1054bc5dd1e93b8c6445210bc52a3fb2"/><file name="Guestbook.php" hash="7f192f296efc4110bd2699ba3bf19609"/></dir><dir name="Resource"><file name="Guestbook.php" hash="98a73b806b07d136218f2203be980d83"/></dir></dir><dir name="controllers"><file name="IndexController.php" hash="4e0353f5c7f486175dcd67dd9c1498b4"/></dir><dir name="etc"><file name="config.xml" hash="3d804c4b887945b6fc821b33c034a4cd"/><file name="system.xml" hash="d3617e6ed23aac67e273c69712311b8c"/></dir><dir name="sql"><dir name="guestbook_setup"><file name="install-1.6.0.0.php" hash="512aa8bfecec1d75cafbb77d1f1fb499"/><file name="mysql4-install-0.1.0.php" hash="c1ca7837b120349678725f3c36074cb4"/></dir></dir></dir></dir></target><target name="magelocale"><dir name="en_US"><file name="RG_Guestbook.csv" hash="04b2e02f69a3d7d167001a5c6ff989d7"/></dir></target><target name="mageetc"><dir name="modules"><file name="RG_Guestbook.xml" hash="66721a0df6fbc76408d3b6c0993a3750"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="rg_guestbook.xml" hash="763d2f931df954c65d5eb10f118402d2"/></dir><dir name="template"><dir name="rg_guestbook"><file name="form.phtml" hash="083a94b02e3d3871a8602ba98858ad89"/><file name="header.phtml" hash="b922fd66f297885389cd04cb1f232bcc"/><file name="recaptcha.phtml" hash="28059c675a3e7f69a428f4b20f2b719b"/><file name="records.phtml" hash="fbae326abb6f36bbebd9976ffd777952"/><dir name="rss"><file name="guestbook.phtml" hash="d41d8cd98f00b204e9800998ecf8427e"/></dir></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="default"><dir name="default"><dir name="css"><file name="guestbook.css" hash="580b91a6e8bfe01a72818e4bf756062e"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
