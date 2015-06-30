@@ -7,8 +7,8 @@
     <channel>community</channel>
     <extends/>
     <summary>Simple guestbook</summary>
-    <description>This was my test task</description>
-    <notes>Moderation not implemented</notes>
+    <description></description>
+    <notes></notes>
     <authors><author><name>Ruslan Gumennyi</name><user>RuslanGumennyi</user><email>ruslan.gumennyi@gmail.com</email></author></authors>
     <date>2011-10-10</date>
     <time>18:57:48</time>
